@@ -5,7 +5,7 @@ function userName() {
     user = prompt("What is your name?");
   }
   let welcomeMessage = "Welcome " + user;
-  document.write(welcomeMessage);
+  return document.write(welcomeMessage);
 }
 
 userName();
@@ -24,7 +24,7 @@ function displayRating() {
     message = ":o";
   }
 
-  document.write(message);
+  return document.write(message);
 }
 
 displayRating();
