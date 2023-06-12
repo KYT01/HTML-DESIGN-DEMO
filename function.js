@@ -25,8 +25,23 @@ function displayRating() {
   }
 
   return document.write(message);
-}
 
-displayRating();
 
+displayRating(); } 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let rate = prompt("How many stars would you rate this site?");
+
+  if (rate >= 1 && rate <= 5) {
+    let stars = "";
+    for (let i = 0; i < rate; i++) {
+      stars += `<img class="star-image" src="https://pngimg.com/uploads/star/star_PNG1595.png">`;
+    }
+    document.getElementById("starsContainer").innerHTML = stars;
+  } else {
+    alert("Invalid rating! Please enter a number between 1 and 5.");
+  }
+});
 
